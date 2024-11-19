@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="truck_1_" data-name="truck (1)" width="46.586" height="46.586" viewBox="0 0 46.586 46.586">
+  <path id="Path_214762" data-name="Path 214762" d="M60.9,395.185a1.364,1.364,0,0,0,1.365,1.365h1.365v1.365a4.1,4.1,0,0,0,4.095,4.095h2.73a4.1,4.1,0,0,0,4.094-4.095V396.55h8.189v1.365a4.1,4.1,0,0,0,4.095,4.095h2.73a4.1,4.1,0,0,0,4.095-4.095V396.55H95.02a1.364,1.364,0,0,0,1.365-1.365V391H60.9Zm0,0" transform="translate(-55.348 -355.423)" fill="#7f6bf6"></path>
+  <path id="Path_214763" data-name="Path 214763" d="M96.486,1.365A1.364,1.364,0,0,0,95.121,0H62.365A1.364,1.364,0,0,0,61,1.365V2.73H96.486Zm0,0" transform="translate(-55.45)" fill="#7f6bf6"></path>
+  <path id="Path_214764" data-name="Path 214764" d="M121,271h10.919v8.189H121Zm0,0" transform="translate(-109.99 -246.342)" fill="#abffc7"></path>
+  <path id="Path_214765" data-name="Path 214765" d="M196,151h10.919v8.189H196Zm0,0" transform="translate(-178.166 -137.261)" fill="#abffc7"></path>
+  <path id="Path_214766" data-name="Path 214766" d="M121,76.469h4.094V66.915a1.364,1.364,0,0,1,1.365-1.365h13.648a1.364,1.364,0,0,1,1.365,1.365v9.554h4.095V60H121Zm0,0" transform="translate(-109.99 -54.541)" fill="#7f6bf6"></path>
+  <path id="Path_214767" data-name="Path 214767" d="M1.365,87.388H8.28V60H1.365A1.364,1.364,0,0,0,0,61.365V86.023A1.364,1.364,0,0,0,1.365,87.388Zm0,0" transform="translate(0 -54.541)" fill="#7f6bf6"></path>
+  <path id="Path_214768" data-name="Path 214768" d="M271,271h10.919v8.189H271Zm0,0" transform="translate(-246.342 -246.342)" fill="#abffc7"></path>
+  <path id="Path_214769" data-name="Path 214769" d="M427.915,60H421V87.388h6.915a1.364,1.364,0,0,0,1.365-1.365V61.365A1.364,1.364,0,0,0,427.915,60Zm0,0" transform="translate(-382.694 -54.541)" fill="#7f6bf6"></path>
+</svg>

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiprocket Cargo Clone</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero-bg {
+      background: linear-gradient(135deg, #f3e5ff, #fff);
+    }
+
+    /* Custom CSS for the gradient text and separators */
+    .gradient-text {
+      background: linear-gradient(to right, #ff9e2c, #a29bfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .separator {
+      width: 4px;
+      height: 30px;
+      background: linear-gradient(to bottom, #ff9e2c, #a29bfe);
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .separator {
+        height: 20px;
+      }
+    }
+
+    .services-list li {
+      list-style: none;
+      margin: 0.5rem 0;
+      display: inline-block;
+    }
+
+    .services-list li::before {
+      content: "|";
+      margin-right: 8px;
+      color: #ddd;
+    }
+
+    .services-list li:first-child::before {
+      content: none;
+    }
+
+    .promo-banner {
+      background: linear-gradient(135deg, #3f0071, #2d0353);
+      color: white;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    .promo-banner::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #ff8c00, #ff3d00);
+    }
+
+    .promo-img {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f8a5c2, #a29bfe);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero img {
+      max-width: 100%;
+    }
+    .faq-section {
+      padding: 2rem 2rem;
+    }
+    .faq-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 2rem 0;
+    }
+    .footer-bottom {
+      background-color: #02006e;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">Shiprocket Cargo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+        <li class="nav-item"><a class="nav-link" href="shippingrateCalcultor.html">Shipping Rate Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+        <li class="nav-item">
+          <a href="#" class="btn btn-primary text-white">Try for Free</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-bg py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="display-4 fw-bold">Tech-enabled shipping solutions for your <span class="text-warning">heavy</span> & <span class="text-primary">bulk shipments</span></h1>
+        <p class="lead mt-3">Elevate your business with our B2B cargo shipping solution at a single platform. Let us handle the heavy lifting for you.</p>
+        <a href="#" class="btn btn-primary btn-lg mt-3">Sign up for free</a>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="images\Group-274973.png" alt="Cargo Illustration" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- stats section -->
+<div class="container text-center py-5">
+    <div class="row g-4">
+      <!-- Stat 1 -->
+      <div class="col-6 col-md-2 offset-md-1">
+        <div class="d-flex flex-column align-items-center">
+          <img src="images\icon-5.svg" alt="₹6/Kg Icon" class="img-fluid mb-3" style="width: 50px;">
+          <h5 class="fw-bold">₹6/kg</h5>
+          <p class="text-muted mb-0">Initial rates*</p>
+        </div>
+      </div>
+      <!-- Stat 2 -->
+      <div class="col-6 col-md-2">
+        <div class="d-flex flex-column align-items-center">
+          <img src="images/icon-4.svg" alt="Pin Codes Icon" class="img-fluid mb-3" style="width: 50px;">
+          <h5 class="fw-bold">24,000+</h5>
+          <p class="text-muted mb-0">Pin codes covered</p>
+        </div>
+      </div>
+      <!-- Stat 3 -->
+      <div class="col-6 col-md-2">
+        <div class="d-flex flex-column align-items-center">
+          <img src="images/icon-3.svg" alt="Cost Reduction Icon" class="img-fluid mb-3" style="width: 50px;">
+          <h5 class="fw-bold">Up to 40%</h5>
+          <p class="text-muted mb-0">Reduction in cost</p>
+        </div>
+      </div>
+      <!-- Stat 4 -->
+      <div class="col-6 col-md-2">
+        <div class="d-flex flex-column align-items-center">
+          <img src="images/icon-2.svg" alt="PTL Delivered Icon" class="img-fluid mb-3" style="width: 50px;">
+          <h5 class="fw-bold">50K+ tonnes</h5>
+          <p class="text-muted mb-0">PTL delivered</p>
+        </div>
+      </div>
+      <!-- Stat 5 -->
+      <div class="col-6 col-md-2">
+        <div class="d-flex flex-column align-items-center">
+          <img src="images/icon-1.svg" alt="Happy Clients Icon" class="img-fluid mb-3" style="width: 50px;">
+          <h5 class="fw-bold">2,000+</h5>
+          <p class="text-muted mb-0">Happy clients</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- stats seciton end  -->
+
+
+<!-- calculate cargo  -->
+
+<div class="container text-center py-5">
+    <!-- Section Title -->
+    <h2 class="fw-bold">
+      <span style="color: orange;">Calculate</span> 
+      <span style="color: purple;">Cargo</span>
+    </h2>
+    <h4 class="fw-bold text-dark">shipping rates on the go</h4>
+    
+    <!-- Form Section -->
+    <div class="bg-light rounded p-4 mt-4 shadow-sm">
+      <form>
+        <div class="row g-3">
+          <!-- Pickup Pincode -->
+          <div class="col-md-4">
+            <label for="pickupPincode" class="form-label fw-bold">Pickup Pincode*</label>
+            <input type="text" class="form-control" id="pickupPincode" placeholder="Enter your Pickup Pincode*" required>
+          </div>
+          <!-- Destination Pincode -->
+          <div class="col-md-4">
+            <label for="destinationPincode" class="form-label fw-bold">Destination Pincode*</label>
+            <input type="text" class="form-control" id="destinationPincode" placeholder="Enter your Destination Pincode*" required>
+          </div>
+          <!-- Weight -->
+          <div class="col-md-4">
+            <label for="weight" class="form-label fw-bold">Weight (in kg)*</label>
+            <input type="number" class="form-control" id="weight" placeholder="Enter your Weight (in kg)*" required>
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="mt-4">
+          <button type="submit" class="btn btn-primary px-4 py-2" style="background-color: #6c5ce7; border: none;">Check Rates</button>
+        </div>
+        <!-- Note -->
+        <div class="text-muted mt-3">
+          *Rates are inclusive of GST
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- end calculate cargo -->
+
+  <!-- platform built section start -->
+  <div class="container my-5">
+    
+    <!-- Main heading -->
+    <div class="text-center mb-5">
+      <h1 class="feature-heading">
+        Platform built to scale your <span class="highlighted-text">business</span>
+      </h1>
+    </div>
+
+    <!-- Features grid -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col text-center">
+        <div class="feature-icon bg-light rounded-circle">
+          <!-- Icon placeholder -->
+          <img src="images/29000-pincode-coverage.svg" alt="Wider reach icon">
+        </div>
+        <h5 class="feature-heading">Wider reach</h5>
+        <p>Ship seamlessly to 24,000+ pin codes across India.</p>
+      </div>
+
+      <div class="col text-center">
+        <div class="feature-icon bg-light rounded-circle">
+          <img src="images/Courier-Partners-14-Courier-Partners.svg" alt="Multiple carriers icon">
+        </div>
+        <h5 class="feature-heading">Multiple carriers</h5>
+        <p>Optimize your supply chain with digitized B2B logistics featuring 14 carriers.</p>
+      </div>
+
+      <div class="col text-center">
+        <div class="feature-icon bg-light rounded-circle">
+          <img src="images/Track-your-orders.svg" alt="Real-time tracking icon">
+        </div>
+        <h5 class="feature-heading">Real-time tracking</h5>
+        <p>Track shipments from the time of order placement till delivery.</p>
+      </div>
+
+      <div class="col text-center">
+        <div class="feature-icon bg-light rounded-circle">
+          <img src="images/Latest-Technology.svg" alt="AI recommendations icon">
+        </div>
+        <h5 class="feature-heading">AI recommendations</h5>
+        <p>Choose the best courier partner with the help of our AI tool.</p>
+      </div>
+
+      <div class="col text-center">
+        <div class="feature-icon bg-light rounded-circle">
+          <img src="images/Cheap-Rates.svg" alt="Affordable rates icon">
+        </div>
+        <h5 class="feature-heading">Affordable rates</h5>
+        <p>Experience the ease of cargo and PTL/FTL/LTL shipping at reduced costs.</p>
+      </div>
+
+      <div class="col text-center">
+        <div class="feature-icon bg-light rounded-circle">
+          <img src="images/Cheap-Rates.svg" alt="Dedicated support icon">
+        </div>
+        <h5 class="feature-heading">Dedicated support</h5>
+        <p>Get 24*7 assistance whenever you need it.</p>
+      </div>
+    </div>
+  </div>
+<!-- platform section end -->
+
+<!--  start Easing your load every step of the way -->
+
+  <div class="container py-5 text-center">
+    <!-- Subtitle -->
+    <p class="text-primary fw-medium">
+      Easing your load every step of the way
+    </p>
+
+    <!-- Main Heading -->
+    <h1 class="fw-bold">
+      Your trusted partner for <span class="gradient-text">heavy shipments</span>,<br>
+      delivering at the speed you need
+    </h1>
+
+    <!-- Description -->
+    <p class="text-muted mt-3 mb-5">
+      Efficient cargo logistics, personalized for you. Navigate the future of shipping<br>
+      with our accessible custom B2B shipping solutions.
+    </p>
+
+    <!-- Services Section -->
+    <div class="row justify-content-center">
+      <!-- Full Truck Load (FTL) -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+        <div class="d-flex align-items-center justify-content-center">
+          <span class="separator"></span>
+          <span class="fw-bold text-dark">Full Truck Load (FTL)</span>
+        </div>
+      </div>
+
+      <!-- Partial Truck Load (PTL) -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+        <div class="d-flex align-items-center justify-content-center">
+          <span class="separator"></span>
+          <span class="fw-bold text-dark">Partial Truck Load (PTL)</span>
+        </div>
+      </div>
+
+      <!-- Air Cargo -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+        <div class="d-flex align-items-center justify-content-center">
+          <span class="separator"></span>
+          <span class="fw-bold text-dark">Air Cargo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- end Easing your load every step of the way -->
+
+ <!-- start Tailored next-gen solutions at your fingertips -->
+  <!-- Header Section -->
+  <header class="text-center py-5">
+    <div class="container">
+      <h1 class="fw-bold">Tailored <span class="text-primary">next-gen</span> <span class="text-info">solutions</span> at your fingertips</h1>
+      <p class="mt-3 text-muted">Accelerate your business with tech-enabled shipping solutions designed to meet all your cargo needs.</p>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Quick Commerce -->
+        <div class="col-md-6 col-lg-3">
+          <div class="p-3 feature-card text-center">
+            <img src="images/sol-img-3.webp" alt="Quick commerce" class="img-fluid mb-3">
+            <h5 class="fw-bold">Quick Commerce</h5>
+            <p class="text-muted">Effortlessly schedule appointment deliveries for FMCG products in the Shiprocket Cargo dashboard.</p>
+          </div>
+        </div>
+
+        <!-- Time-bound Deliveries -->
+        <div class="col-md-6 col-lg-3">
+          <div class="p-3 feature-card text-center">
+            <img src="images/sol-img-5.webp" alt="Time-bound deliveries" class="img-fluid mb-3">
+            <h5 class="fw-bold">Time-bound Deliveries</h5>
+            <p class="text-muted">Delight your customers with time-bound deliveries, even during off-hours (11:00 PM – 08:00 AM).</p>
+          </div>
+        </div>
+
+        <!-- Email/SMS Communication -->
+        <div class="col-md-6 col-lg-3">
+          <div class="p-3 feature-card text-center">
+            <img src="images/sol-img-3.webp" alt="Email/SMS communication" class="img-fluid mb-3">
+            <h5 class="fw-bold">Email/SMS Communication</h5>
+            <p class="text-muted">Count on seamless email/SMS communication to provide customers with all necessary updates.</p>
+          </div>
+        </div>
+
+        <!-- ERP Integrations -->
+        <div class="col-md-6 col-lg-3">
+          <div class="p-3 feature-card text-center">
+            <img src="images/sol-img-4.webp" alt="ERP integrations" class="img-fluid mb-3">
+            <h5 class="fw-bold">ERP Integrations</h5>
+            <p class="text-muted">Unlock Shiprocket Cargo’s full potential with seamless API integrations for ERP systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">All it takes is 3 steps to <span class="text-primary">get started</span></h2>
+        <p class="text-muted">Ship your cargo shipments in no time and at your convenience. Here’s how to get started:</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-4 text-center">
+          <div class="d-flex flex-column align-items-center">
+            <div class="step-number">1</div>
+            <h5 class="mt-3 fw-bold">Create a Shipment</h5>
+            <p class="text-muted">Upload bulk shipments or create them manually through the Shiprocket Cargo dashboard.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-4 text-center">
+          <div class="d-flex flex-column align-items-center">
+            <div class="step-number">2</div>
+            <h5 class="mt-3 fw-bold">Select a Courier Partner</h5>
+            <p class="text-muted">Choose a courier partner using our AI tool, based on factors such as weight, destination, and more.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-4 text-center">
+          <div class="d-flex flex-column align-items-center">
+            <div class="step-number">3</div>
+            <h5 class="mt-3 fw-bold">Ship Your Parcel</h5>
+            <p class="text-muted">Generate labels, prepare your packages, and hand them over to the chosen courier partner.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- end Tailored next-gen solutions at your fingertips -->
+
+
+ <!--  start Prioritising your business at every turn -->
+    <!-- Value-added Services Section -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold">
+        <span class="text-warning">Prioritising</span> <span class="text-primary">your business</span> at every turn
+      </h2>
+      <p class="mt-3 text-muted">
+        In a dynamic world with evolving customer demands and new expectations, rest assured that we’ve got you covered with next-gen value-added services.
+      </p>
+
+      <ul class="services-list text-muted fw-bold mt-4 d-inline-block">
+        <li>Appointment deliveries</li>
+        <li>PAN-India coverage</li>
+        <li>ePODs</li>
+        <li>Weight dispute redressal</li>
+        <li>NDRs</li>
+        <li>Unicommerce & ClickPost channel integrations</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Promo Banner Section -->
+  <section class="py-3">
+    <div class="container">
+      <div class="promo-banner d-flex flex-column flex-lg-row align-items-center text-center text-lg-start">
+        <div class="flex-grow-1">
+          <h2 class="fw-bold">Ship effortlessly, beat competition and drive growth</h2>
+          <button class="btn btn-light mt-3 fw-bold">Ship now</button>
+        </div>
+        <div class="promo-img mt-4 mt-lg-0 ms-lg-5">
+          <img src="images/cta-img-1.webp" alt="Person with tablet" class="img-fluid" width="150">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- end Prioritising your business at every turn -->
+
+ <div class="container my-5">
+  <!-- Section Title -->
+  <h2 class="section-title">
+    Learn more with our <span>blogs</span>
+  </h2>
+
+  <!--  start Learn more with our blogs -->
+  <!-- Blog Cards -->
+  <div class="row mt-4">
+    <!-- Card 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card blog-card">
+        <img src="images/2.webp" alt="Blog 1">
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge">B2B BULK SHIPPING</span>
+          </div>
+          <h5 class="blog-title">5 Best Sites to Ship Bulk Orders</h5>
+          <a href="#" class="know-more">Know more &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card blog-card">
+        <img src="images/23.webp" alt="Blog 2">
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge">B2B SHIPPING</span>
+            <span class="badge">CARGO SHIPPING</span>
+          </div>
+          <h5 class="blog-title">5 Common B2B Shipping Mistakes That Businesses Must Avoid</h5>
+          <a href="#" class="know-more">Know more &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card blog-card">
+        <img src="images/26.webp" alt="Blog 3">
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge">B2B LOGISTICS</span>
+            <span class="badge">B2B TRENDS</span>
+          </div>
+          <h5 class="blog-title">5 B2B Logistics Technology Trends to Lookout for in 2024</h5>
+          <a href="#" class="know-more">Know more &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--  end Learn more with our blogs -->
+
+  <!--  start FAQ -->
+<!-- Hero Section -->
+<div class="container-fluid hero">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <h1>Hassle-free Bulk Shipping Starts Here</h1>
+      <p>Manage your shipments with ease and accuracy.</p>
+      <a href="#" class="btn btn-light">Sign up for free</a>
+    </div>
+    <div class="col-md-4">
+      <img src="images/footerRV.webp" alt="Person with laptop">
+    </div>
+  </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="container faq-section">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq1Heading">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+          What is Shiprocket Cargo?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1Heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          A product of Shiprocket, Shiprocket Cargo offers bulk and cargo shipping services to eCommerce sellers.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq2Heading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+          How can I start shipping with Shiprocket Cargo?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2Heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          You can sign up and start shipping easily by following the provided instructions.
+        </div>
+      </div>
+    </div>
+    <!-- Additional FAQs can be added similarly -->
+  </div>
+</div>
+
+
+  <!-- END FAQ -->
+
+
+  <!-- footer -->
+
+  <!-- Footer Section -->
+<footer>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Logo & Social Media -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Shiprocket</h5>
+          <div>
+            <a href="#"><i class="bi bi-facebook me-2"></i></a>
+            <a href="#"><i class="bi bi-instagram me-2"></i></a>
+            <a href="#"><i class="bi bi-youtube me-2"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+          <p class="mt-3"><strong>Reach Us At</strong></p>
+          <p><i class="bi bi-envelope"></i> cargosupport@shiprocket.com</p>
+          <p><i class="bi bi-envelope"></i> cargosales@shiprocket.com</p>
+          <p><i class="bi bi-geo-alt"></i> Shiprocket, 416, Udyog Vihar III, Gurugram, Haryana 122008</p>
+        </div>
+
+        <!-- Products -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>Products</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Shiprocket Shipping</a></li>
+            <li><a href="#">ShiprocketX</a></li>
+            <li><a href="#">Shiprocket Fulfillment</a></li>
+            <li><a href="#">Shiprocket Cargo</a></li>
+            <!-- Add more as necessary -->
+          </ul>
+        </div>
+
+        <!-- Features -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>Features</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Cash on Delivery</a></li>
+            <li><a href="#">API Integration</a></li>
+            <li><a href="#">Email & SMS Notifications</a></li>
+            <li><a href="#">All Features</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Shipping Rate Calculator</a></li>
+            <li><a href="#">Knowledge Base</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">eCommerce Report</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Release</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <p>© 2024 Shiprocket. All rights reserved.</p>
+        <div>
+          <a href="#" class="me-2">Privacy Policy</a>
+          <a href="#" class="me-2">Compliance</a>
+          <a href="#">Refund & Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- footer -->
+  
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>1  

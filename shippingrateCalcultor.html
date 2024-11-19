@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Rates Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .footer {
+      background-color: #f8f9fa;
+      padding: 2rem 0;
+    }
+    .footer-bottom {
+      background-color: #02006e;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body style="background: linear-gradient(to right, #f3e7e9, #e3eeff);">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">Shiprocket Cargo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="shippingrateCalcultor.html">Shipping Rate Calculator</a></li>
+          <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+          <li class="nav-item">
+            <a href="#" class="btn btn-primary text-white">Try for Free</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <!-- Left Section -->
+      <div class="col-md-6 text-center text-md-start">
+        <h1 class="fw-bold" style="color: #fd7e14;">Get Accurate</h1>
+        <h1 class="fw-bold" style="color: #6c63ff;">Shipping Rates</h1>
+        <h1 class="fw-bold text-dark">Instantly</h1>
+        <p class="mt-3 fs-5 text-secondary">
+          Easily estimate shipping charges for your heavy and bulk shipments using our comprehensive bulk shipping rate calculator.
+        </p>
+      </div>
+      <!-- Right Section -->
+      <div class="col-md-6">
+        <div class="p-4 bg-white shadow rounded">
+          <h4 class="text-dark mb-4">Bulk Shipping Rates Calculator</h4>
+          <form>
+            <div class="mb-3">
+              <label for="pickupPincode" class="form-label">Pickup Pincode*</label>
+              <input type="text" class="form-control" id="pickupPincode" placeholder="Enter your Pickup Pincode">
+            </div>
+            <div class="mb-3">
+              <label for="destinationPincode" class="form-label">Destination Pincode*</label>
+              <input type="text" class="form-control" id="destinationPincode" placeholder="Enter your Destination Pincode">
+            </div>
+            <div class="mb-3">
+              <label for="weight" class="form-label">Weight (in kg)*</label>
+              <div class="input-group">
+                <input type="number" class="form-control" id="weight" placeholder="Enter your Weight (in kg)">
+                <span class="input-group-text">kg</span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Dimensions</label>
+              <div class="row gx-2">
+                <div class="col">
+                  <input type="number" class="form-control" placeholder="Length">
+                </div>
+                <div class="col">
+                  <input type="number" class="form-control" placeholder="Width">
+                </div>
+                <div class="col">
+                  <input type="number" class="form-control" placeholder="Height">
+                </div>
+                <div class="col-auto">
+                  <span class="input-group-text">cm</span>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Check Rates</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+ <!-- -- Footer Section  -->
+ <footer>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- Logo & Social Media -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Shiprocket</h5>
+            <div>
+              <a href="#"><i class="bi bi-facebook me-2"></i></a>
+              <a href="#"><i class="bi bi-instagram me-2"></i></a>
+              <a href="#"><i class="bi bi-youtube me-2"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <p class="mt-3"><strong>Reach Us At</strong></p>
+            <p><i class="bi bi-envelope"></i> cargosupport@shiprocket.com</p>
+            <p><i class="bi bi-envelope"></i> cargosales@shiprocket.com</p>
+            <p><i class="bi bi-geo-alt"></i> Shiprocket, 416, Udyog Vihar III, Gurugram, Haryana 122008</p>
+          </div>
+  
+          <!-- Products -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Products</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Shiprocket Shipping</a></li>
+              <li><a href="#">ShiprocketX</a></li>
+              <li><a href="#">Shiprocket Fulfillment</a></li>
+              <li><a href="#">Shiprocket Cargo</a></li>
+              <!-- Add more as necessary -->
+            </ul>
+          </div>
+  
+          <!-- Features -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Features</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Cash on Delivery</a></li>
+              <li><a href="#">API Integration</a></li>
+              <li><a href="#">Email & SMS Notifications</a></li>
+              <li><a href="#">All Features</a></li>
+            </ul>
+          </div>
+  
+          <!-- Resources -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Resources</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Shipping Rate Calculator</a></li>
+              <li><a href="#">Knowledge Base</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">eCommerce Report</a></li>
+            </ul>
+          </div>
+  
+          <!-- Company -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Company</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press Release</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <p>© 2024 Shiprocket. All rights reserved.</p>
+          <div>
+            <a href="#" class="me-2">Privacy Policy</a>
+            <a href="#" class="me-2">Compliance</a>
+            <a href="#">Refund & Cancellation Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- footer -->
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
